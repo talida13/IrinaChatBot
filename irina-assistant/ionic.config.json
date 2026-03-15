@@ -1,0 +1,7 @@
+{
+  "name": "irina-assistant",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
