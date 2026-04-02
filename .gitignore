@@ -1,2 +1,4 @@
 .env
 backend/__pycache__/*
+backend/intent_model/*
+backend/results/*
