@@ -1,0 +1,339 @@
+.faq-content {
+  --background: var(--surface);
+  padding: 0 !important;
+}
+
+.faq-header {
+  background: var(--navy);
+  padding: 26px 20px 70px;
+  position: relative;
+  overflow: visible;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.faq-header::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.1);
+}
+
+.faq-header::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.faq-search {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: -28px;
+  z-index: 20;
+}
+
+.faq-search input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(144, 163, 183, 0.35);
+  border-radius: 16px;
+  padding: 12px 16px 12px 46px;
+  font-size: 14px;
+  font-family: var(--font);
+  color: #1b2a4a;
+  outline: none;
+  box-shadow: 0 10px 24px rgba(9, 35, 79, 0.13);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.faq-search input::placeholder {
+  color: rgba(91, 111, 143, 0.75);
+}
+
+.faq-search input:focus {
+  border-color: #6a94ff;
+  box-shadow: 0 10px 26px rgba(38, 100, 255, 0.22);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.faq-body {
+  padding: 45px 0 20px;
+}
+
+.faq-categories {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+}
+
+.faq-header h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  position: relative;
+  margin-top: 0;
+}
+
+.faq-header p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  position: relative;
+  margin: 0 0 22px 0;
+  line-height: 1.4;
+}
+
+.faq-categories {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 16px;
+}
+
+.faq-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-chip {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border: 1.5px solid rgba(33, 77, 164, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+  color: #2f4d8e;
+  transition: all 0.2s;
+  font-family: var(--font);
+}
+
+.cat-chip:hover,
+.cat-chip.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.faq-list {
+  padding: 0 16px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid rgba(200, 210, 220, 0.45);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.15s;
+  box-shadow: 0 5px 18px rgba(29, 61, 110, 0.08);
+}
+
+.faq-item.open {
+  border-color: rgba(110, 148, 217, 0.6);
+  box-shadow: 0 10px 24px rgba(60, 95, 170, 0.12);
+}
+
+.faq-q {
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 12px;
+  user-select: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font);
+}
+
+.faq-q-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f3964;
+  line-height: 1.45;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f3f6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s,
+    background 0.15s;
+}
+
+.faq-chevron svg {
+  width: 12px;
+  height: 12px;
+  stroke: #5e7097;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+  background: #1f3c8a;
+}
+
+.faq-item.open .faq-chevron svg {
+  stroke: white;
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-a {
+  max-height: 400px;
+}
+
+.faq-a-inner {
+  padding: 0 16px 18px;
+  border-top: 1px solid rgba(220, 228, 241, 0.9);
+  padding-top: 14px;
+  font-size: 13px;
+  color: #526b8f;
+  line-height: 1.7;
+}
+
+.faq-a-inner p {
+  margin: 0;
+}
+
+.faq-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(212, 160, 23, 0.16);
+  color: #8b6800;
+}
+
+.faq-q-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s,
+    background 0.15s;
+}
+
+.faq-chevron svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+  background: var(--navy);
+}
+
+.faq-item.open .faq-chevron svg {
+  stroke: white;
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-a {
+  max-height: 400px;
+}
+
+.faq-a-inner {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.faq-a-inner p {
+  margin: 0;
+}
+
+.faq-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--gold-light);
+  color: #8b6800;
+}
