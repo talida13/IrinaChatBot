@@ -37,18 +37,18 @@ const Home: React.FC = () => {
 
           <div className="section-label">QUICK ACCESS</div>
           <div className="quick-actions">
-            <div className="qa-card">
+            <a className="qa-card" href="/chat" style={{textDecorationLine: "none"}}>
               <div className="qa-icon blue">💬</div>
               <div className="qa-title">Chat with Assistant</div>
               <div className="qa-sub">
                 Ask about admissions, visas & campus life
               </div>
-            </div>
-            <div className="qa-card">
+            </a>
+            <a className="qa-card" href="/faq" style={{textDecorationLine: "none"}}>
               <div className="qa-icon gold">❓</div>
               <div className="qa-title">Browse FAQ</div>
               <div className="qa-sub">Instant answers to common questions</div>
-            </div>
+            </a>
             <div className="qa-card">
               <div className="qa-icon green">🗺️</div>
               <div className="qa-title">Campus Map</div>
