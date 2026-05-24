@@ -27,19 +27,19 @@
   pointer-events: none;
 }
 
-.header-logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--navy);
+.header-logo-img {
+  height: 120px;
+  width: auto;
   flex-shrink: 0;
-  letter-spacing: -0.5px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.header-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .header-text {

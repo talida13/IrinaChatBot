@@ -1,4 +1,5 @@
 import { IonContent, IonPage } from "@ionic/react";
+import irinaLogo from "../assets/irina-logo.svg";
 import "./Home.css";
 
 const Home: React.FC = () => {
@@ -7,10 +8,11 @@ const Home: React.FC = () => {
       <IonContent className="home-content" fullscreen scrollY={true}>
 
         <div className="app-header">
-          <div className="header-logo">UAIC</div>
+          <img src={irinaLogo} alt="IRINA" className="header-logo-img" />
+          <div className="header-divider" />
           <div className="header-text">
             <h1>UAIC International</h1>
-            <p>Alexandru Ioan Cuza University - Iași</p>
+            <p>Alexandru Ioan Cuza University · Iași</p>
           </div>
           <div className="header-badge">INT'L STUDENTS</div>
         </div>
