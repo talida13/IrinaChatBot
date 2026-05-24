@@ -4,6 +4,7 @@ import { send } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 import "./Chat.css";
 import { Webchat } from "@botpress/webchat";
+import AppHeader from "../components/AppHeader";
 
 interface Message {
   id: string;
@@ -15,7 +16,8 @@ interface Message {
 const Chat: React.FC = () => {
   return (
     <IonPage>
-      <IonContent className="chat-content" fullscreen scrollY={false}>
+      <IonContent className="chat-content" fullscreen scrollY={true}>
+        <AppHeader />
         <Webchat clientId={import.meta.env.VITE_BOTPRESS_CLIENT_ID} />
       </IonContent>
     </IonPage>

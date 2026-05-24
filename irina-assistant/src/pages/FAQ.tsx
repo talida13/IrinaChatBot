@@ -1,6 +1,7 @@
 import { IonContent, IonPage } from "@ionic/react";
 import { useState } from "react";
 import "./FAQ.css";
+import AppHeader from "../components/AppHeader";
 
 interface FAQItem {
   id: string;
@@ -120,7 +121,7 @@ const FAQ: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="faq-content" fullscreen scrollY={true}>
-
+        <AppHeader />
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
           <p>Everything international students ask about UAIC</p>

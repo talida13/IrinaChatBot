@@ -1,23 +1,13 @@
 import { IonContent, IonPage } from "@ionic/react";
 import irinaLogo from "../assets/irina-logo.svg";
 import "./Home.css";
+import AppHeader from "../components/AppHeader";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="home-content" fullscreen scrollY={true}>
-
-        <div className="app-header">
-          <img src={irinaLogo} alt="IRINA" className="header-logo-img" />
-          <div className="header-divider" />
-          <div className="header-text">
-            <h1>UAIC International</h1>
-            <p>Alexandru Ioan Cuza University · Iași</p>
-          </div>
-          <div className="header-badge">INT'L STUDENTS</div>
-        </div>
-
-
+        <AppHeader />
         <div className="home-hero">
           <div className="hero-greeting">Welcome to Iași, Romania</div>
           <h2 className="hero-title">

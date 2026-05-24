@@ -4,6 +4,7 @@ import { GoogleLogin } from "@react-oauth/google";
 import { useAuth } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
 import "./Login.css";
+import AppHeader from "../components/AppHeader";
 
 const Login: React.FC = () => {
   const { login, isLoading, isAuthenticated } = useAuth();
@@ -43,16 +44,7 @@ const Login: React.FC = () => {
       <IonContent className="login-content">
         <div className="login-page">
 
-          <nav className="login-nav">
-            <div className="login-nav-brand">
-              <div className="login-nav-badge">UAIC</div>
-              <div className="login-nav-text">
-                <span className="login-nav-name">UAIC International</span>
-                <span className="login-nav-sub">Alexandru Ioan Cuza University · Iași</span>
-              </div>
-            </div>
-            <span className="login-nav-pill">INT'L STUDENTS</span>
-          </nav>
+          <AppHeader />
 
           <div className="login-body">
             <div className="login-split">

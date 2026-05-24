@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IonContent, IonPage } from "@ionic/react";
 import { useAuth } from "../context/AuthContext";
 import "./MyRequests.css";
+import AppHeader from "../components/AppHeader";
 
 // ─── tipuri ───────────────────────────────────────────────
 interface BuddyRequest {
@@ -73,15 +74,7 @@ const MyRequests: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="mr-content" fullscreen scrollY={true}>
-        {/* ── Header ── */}
-        <div className="app-header">
-          <div className="header-logo">UAIC</div>
-          <div className="header-text">
-            <h1>UAIC International</h1>
-            <p>Alexandru Ioan Cuza University - Iași</p>
-          </div>
-          <div className="header-badge">INT'L STUDENTS</div>
-        </div>
+        <AppHeader />
 
         {/* ── Hero ── */}
         <div className="mr-hero">
