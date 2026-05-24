@@ -37,14 +37,19 @@ const Home: React.FC = () => {
 
           <div className="section-label">QUICK ACCESS</div>
           <div className="quick-actions">
-            <a className="qa-card" href="/chat" style={{textDecorationLine: "none"}}>
+            <a className="qa-card" href="/chat" style={{ textDecorationLine: "none" }}>
               <div className="qa-icon blue">💬</div>
               <div className="qa-title">Chat with Assistant</div>
               <div className="qa-sub">
                 Ask about admissions, visas & campus life
               </div>
             </a>
-            <a className="qa-card" href="/faq" style={{textDecorationLine: "none"}}>
+            <a className="qa-card" href="/my-requests" style={{ textDecorationLine: "none" }}>
+              <div className="qa-icon green">🤝</div>
+              <div className="qa-title">My Buddy Requests</div>
+              <div className="qa-sub">Track your matches and sessions</div>
+            </a>
+            <a className="qa-card" href="/faq" style={{ textDecorationLine: "none" }}>
               <div className="qa-icon gold">❓</div>
               <div className="qa-title">Browse FAQ</div>
               <div className="qa-sub">Instant answers to common questions</div>

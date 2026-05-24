@@ -11,11 +11,13 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { home, chatbubble, help, logOut } from "ionicons/icons";
+import { home, chatbubble, help, logOut, people } from "ionicons/icons";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import FAQ from "./pages/FAQ";
 import Login from "./pages/Login";
+import MyRequests from "./pages/MyRequests";
+
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -56,6 +58,7 @@ const AppContent: React.FC = () => {
           <IonRouterOutlet>
             <PrivateRoute exact path="/home" component={Home} />
             <PrivateRoute exact path="/chat" component={Chat} />
+            <PrivateRoute exact path="/my-requests" component={MyRequests} />
             <PrivateRoute path="/faq" component={FAQ} />
             <Route exact path="/">
               <Redirect to="/home" />
@@ -69,6 +72,10 @@ const AppContent: React.FC = () => {
             <IonTabButton tab="chat" href="/chat" className="tab-btn">
               <IonIcon aria-hidden="true" icon={chatbubble} />
               <IonLabel>Assistant</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="my-requests" href="/my-requests" className="tab-btn">
+              <IonIcon aria-hidden="true" icon={people} />
+              <IonLabel>My Buddy</IonLabel>
             </IonTabButton>
             <IonTabButton tab="faq" href="/faq" className="tab-btn">
               <IonIcon aria-hidden="true" icon={help} />

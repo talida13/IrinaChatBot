@@ -1,0 +1,308 @@
+/* ── Page background ─────────────────────────────────────── */
+.mr-content {
+  --background: var(--surface);
+  padding: 0 !important;
+}
+
+/* ── Hero (same pattern as Home) ────────────────────────── */
+.mr-hero {
+  background: linear-gradient(150deg, #0b2a5a 0%, #1a4a8a 100%);
+  padding: 28px 20px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mr-hero::before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.08);
+  pointer-events: none;
+}
+
+.mr-hero-title {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.mr-hero-title span {
+  color: var(--gold);
+}
+
+.mr-hero-sub {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0;
+  position: relative;
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+.mr-body {
+  padding: 20px 16px 36px;
+}
+
+/* reutilizat din Home */
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* ── Loading ─────────────────────────────────────────────── */
+.mr-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 60px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mr-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Error ───────────────────────────────────────────────── */
+.mr-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.mr-error-icon {
+  font-size: 32px;
+}
+
+/* ── Empty state ─────────────────────────────────────────── */
+.mr-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mr-empty-icon {
+  font-size: 48px;
+  margin-bottom: 4px;
+}
+
+.mr-empty h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.mr-empty p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 240px;
+}
+
+.mr-cta {
+  margin-top: 8px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.mr-cta:active {
+  opacity: 0.8;
+}
+
+/* ── Cards list ──────────────────────────────────────────── */
+.mr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mr-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Card top row ────────────────────────────────────────── */
+.mr-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mr-status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.status-accepted {
+  background: #e6f5ec;
+  color: #1e7e44;
+}
+
+.status-open {
+  background: #fbf3dc;
+  color: #9a6c00;
+}
+
+.mr-date {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── Info grid ───────────────────────────────────────────── */
+.mr-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mr-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mr-info-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.mr-info-value {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ── Level badge ─────────────────────────────────────────── */
+.mr-level-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.level-basic {
+  background: #e6f0fb;
+  color: #1a4a8a;
+}
+
+.level-intermediate {
+  background: #eeedfe;
+  color: #4a3abd;
+}
+
+.level-advanced {
+  background: #e6f5ec;
+  color: #1e7e44;
+}
+
+/* ── Volunteer match box ─────────────────────────────────── */
+.mr-volunteer {
+  background: linear-gradient(135deg, #f0f5ff 0%, #fffbee 100%);
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mr-volunteer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mr-volunteer-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mr-volunteer-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.mr-volunteer-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mr-volunteer-email {
+  font-size: 11px;
+  color: #1a4a8a;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.mr-volunteer-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
